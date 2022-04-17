@@ -87,10 +87,10 @@ window.addEventListener('load', () => {
             if (task_edit_el.innerText.toLowerCase() === "edit") {
                 task_input_el.removeAttribute("readonly");
                 task_input_el.focus();
-                task_edit_el.innerText = "Save";
+                task_edit_el.innerText = "Zapisz";
             } else {
                 task_input_el.setAttribute("readonly", "readonly");
-                task_edit_el.innerText = "Edit";
+                task_edit_el.innerText = "Edytuj";
             }
         })
 
