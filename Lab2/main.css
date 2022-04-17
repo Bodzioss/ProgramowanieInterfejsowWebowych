@@ -97,7 +97,7 @@ main {
 .task-list h2{
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--grey);
+    color: #EEE;
     margin-bottom: 1rem;
 }
 

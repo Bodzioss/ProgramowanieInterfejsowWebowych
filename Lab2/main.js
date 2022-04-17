@@ -36,11 +36,11 @@ window.addEventListener('load', () => {
 
         const task_edit_el = document.createElement("button");
         task_edit_el.classList.add("edit");
-        task_edit_el.innerText = "Edit";
+        task_edit_el.innerText = "Edytuj";
 
         const task_delete_el = document.createElement("button");
         task_delete_el.classList.add("delete");
-        task_delete_el.innerText = "Delete";
+        task_delete_el.innerText = "Usuń";
 
         const date_el = document.createElement("div");
         date_el.classList.add("date");
