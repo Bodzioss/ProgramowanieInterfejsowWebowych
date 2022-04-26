@@ -7,7 +7,8 @@ import GroupResult from './components/GroupResult';
 import StudentsResults from './components/StudentsResult';
 import filterGroup from './filterGroup';
 import filterStudents from './filterStudents';
-import CreateGroupPopup from "./components/CreateGroupPopup";
+import { GroupContainer } from './components/GroupContainer';
+import { StudentContainer } from './components/StudentContainer';
 
 import "./App.css";
 
@@ -29,16 +30,38 @@ export default class App extends PureComponent {
     });
   };
 
+  
 
   render() {
+    const triggerTextStudent = 'Add Student';
+    const GroupOnSubmit = (event) => {
+      event.preventDefault(event);
+      console.log(event.target.name.value);
+      console.log(event.target.email.value);
+    };
+
+    const triggerTextGroup = 'Add Group';
+    const StudentOnSubmit = (event) => {
+      event.preventDefault(event);
+      console.log(event.target.name.value);
+      console.log(event.target.email.value);
+    };
     return (
       <Router>
         <div className="App">
           <NavigationPanel />
           <InputData textChange={this.handleSearchChange} />
           <Routes>
-            <Route path="/StudentsResult" element={<StudentsResults studentsData={this.state.filterStudents} />} />
-            <Route path="/GroupResult" element={<div><GroupResult groupData={this.state.filterGroup} /> <CreateGroupPopup trigger={true}><h1>Dziala</h1></CreateGroupPopup> </div>} />
+            <Route path="/StudentsResult" element={<div>
+              <StudentsResults studentsData={this.state.filterStudents} />
+              <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} />
+            </div>
+            } />
+            <Route path="/GroupResult" element={<div>
+              <GroupResult groupData={this.state.filterGroup} />
+              <GroupContainer triggerText={triggerTextGroup} onSubmit={GroupOnSubmit} />
+            </div>
+            } />
           </Routes>
         </div>
       </Router>
