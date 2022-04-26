@@ -5,10 +5,10 @@ import StudentsResultRow from "./StudentsResultRow";
 import "./StudentsResult.css";
 
 export default class StudentsResult extends PureComponent {
-    static propTypes = {
-      studentsData: PropTypes.array
-      };
-    
+  static propTypes = {
+    studentsData: PropTypes.array
+  };
+
 
   render() {
     return (

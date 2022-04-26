@@ -1,21 +1,17 @@
 import React, { PureComponent } from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import Header from './Header';
+import NavigationPanel from './NavigationPanel';
 import InputData from './InputData';
 import GroupResult from './GroupResult';
-import filterGroup from './filterGroup';
-
-import "./App.css";
 import StudentsResults from './StudentsResult';
+import filterGroup from './filterGroup';
 import filterStudents from './filterStudents';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import NavigationPanel from './NavigationPanel';
+import "./App.css";
 
 
 export default class App extends PureComponent {
-
-  
 
   constructor(props) {
     super(props);
@@ -35,22 +31,16 @@ export default class App extends PureComponent {
 
   render() {
     return (
-      // <div className="App">
-      //   <Header />
-      //   <InputData textChange={this.handleSearchChange} />
-      //   {/* <GroupResults groupData={this.state.filterGroup}/> */}
-      //    <StudentsResults studentsData={this.state.filterStudents}/>
-      // </div>
       <Router>
-      <div className="App">
-        <NavigationPanel />
-        <InputData textChange={this.handleSearchChange} />
-        <Routes>
-          <Route path="/StudentsResult" element={ <StudentsResults studentsData={this.state.filterStudents}/>}/>
-          <Route path="/GroupResult" element={ <GroupResult groupData={this.state.filterGroup}/>}/>
-        </Routes>
-      </div>
-    </Router>
+        <div className="App">
+          <NavigationPanel />
+          <InputData textChange={this.handleSearchChange} />
+          <Routes>
+            <Route path="/StudentsResult" element={<StudentsResults studentsData={this.state.filterStudents} />} />
+            <Route path="/GroupResult" element={<GroupResult groupData={this.state.filterGroup} />} />
+          </Routes>
+        </div>
+      </Router>
     );
   }
 }

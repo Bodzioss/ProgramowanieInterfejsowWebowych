@@ -4,11 +4,11 @@ import PropTypes from "prop-types"
 import GroupResultRow from "./GroupResultRow.js";
 import "./GroupResultRow.css";
 
-export default class GroupResults extends PureComponent {
-    static propTypes = {
-        groupData: PropTypes.array
-      };
-    
+export default class GroupResult extends PureComponent {
+  static propTypes = {
+    groupData: PropTypes.array
+  };
+
 
   render() {
     return (
