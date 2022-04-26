@@ -1,19 +1,25 @@
 [
     {
-      "title": "Projekt A",
-      "subject": "History",
+      "name": "Marcin",
+      "email" : "Marcin@wp.pl",
+      "tags": "Projekt A",
+      "subjects": "Historia",
       "description":
         "hundred points symbol symbol wow wow win win perfect perfect parties parties"
     },
     {
-      "title": "Projekt A",
-      "subject": "History",
+      "name": "Adam",
+      "email" : "Adam@wp.pl",
+      "tags": "Projekt B",
+      "subjects": "Geografia",
       "description":
         "hundred points symbol symbol wow wow win win perfect perfect parties parties"
       },
       {
-        "title": "Projekt A",
-        "subject": "History",
+        "name": "Anna",
+        "email" : "Anna@wp.pl",
+        "tags": "Projekt C",
+        "subjects": "Informatyka",
         "description":
           "hundred points symbol symbol wow wow win win perfect perfect parties parties"
       }
