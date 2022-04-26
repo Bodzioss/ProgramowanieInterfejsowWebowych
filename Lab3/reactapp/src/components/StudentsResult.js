@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types"
 
 import StudentsResultRow from "./StudentsResultRow";
-import "./StudentsResult.css";
+import "./styles/StudentsResult.css";
 
 export default class StudentsResult extends PureComponent {
   static propTypes = {

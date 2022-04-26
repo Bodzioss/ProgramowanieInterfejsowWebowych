@@ -1,12 +1,13 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import NavigationPanel from './NavigationPanel';
-import InputData from './InputData';
-import GroupResult from './GroupResult';
-import StudentsResults from './StudentsResult';
+import NavigationPanel from './components/NavigationPanel';
+import InputData from './components/InputData';
+import GroupResult from './components/GroupResult';
+import StudentsResults from './components/StudentsResult';
 import filterGroup from './filterGroup';
 import filterStudents from './filterStudents';
+import CreateGroupPopup from "./components/CreateGroupPopup";
 
 import "./App.css";
 
@@ -37,7 +38,7 @@ export default class App extends PureComponent {
           <InputData textChange={this.handleSearchChange} />
           <Routes>
             <Route path="/StudentsResult" element={<StudentsResults studentsData={this.state.filterStudents} />} />
-            <Route path="/GroupResult" element={<GroupResult groupData={this.state.filterGroup} />} />
+            <Route path="/GroupResult" element={<div><GroupResult groupData={this.state.filterGroup} /> <CreateGroupPopup trigger={true}><h1>Dziala</h1></CreateGroupPopup> </div>} />
           </Routes>
         </div>
       </Router>

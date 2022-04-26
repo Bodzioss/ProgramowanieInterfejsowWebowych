@@ -1,17 +1,17 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import "./GroupResultRow.css";
+import "./styles/StudentsResultRow.css";
 
-export default class GroupResultsRow extends PureComponent {
+export default class StudentsResultRow extends PureComponent {
 
   render() {
     return (
       <div className="component-group-result-row copy-to-clipboard">
         <div className="main">
-          <span className="title">{this.props.title}  </span>
+          <span className="Name">{this.props.name}  </span>
           <div className="number">
-            <span className="currentNumber">{this.props.currentNumber}/</span>
-            <span className="maxNumber">{this.props.maxNumber}</span>
+            <span className="tags">{this.props.tags}/</span>
+            <span className="subjects">{this.props.subjects}</span>
           </div>
         </div>
         <span className="description">{this.props.description}</span>

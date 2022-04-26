@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types"
 
 import GroupResultRow from "./GroupResultRow.js";
-import "./GroupResultRow.css";
+import "./styles/GroupResultRow.css";
 
 export default class GroupResult extends PureComponent {
   static propTypes = {
