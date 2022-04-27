@@ -17,8 +17,7 @@ export default class GroupResult extends PureComponent {
           <GroupResultRow
             key={groupData.title}
             title={groupData.title}
-            currentNumber={groupData.currentNumber}
-            maxNumber={groupData.maxNumber}
+            subjects={groupData.subjects}
             description={groupData.description}
           />
         ))}

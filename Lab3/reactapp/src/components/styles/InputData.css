@@ -1,5 +1,6 @@
 .component-search-input {
   border-bottom: 1px solid #ccc;
+  margin-top: 10px;
 }
 
 .component-search-input>div {

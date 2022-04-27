@@ -1,24 +1,29 @@
 import React from 'react';
 
+import "./styles/GroupForm.css"
+
 export const GroupForm = ({ GroupOnSubmit }) => {
   return (
     <form onSubmit={GroupOnSubmit}>
       <div className="form-group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Nazwa</label>
         <input className="form-control" id="name" />
       </div>
       <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="name@example.com"
-        />
+        <label htmlFor="tags">Opis</label>
+        <input className="form-control" id="tags" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="members">Lista członków</label>
+        <input className="form-control" id="members" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="subjects">Przedmiot</label>
+        <input className="form-control" id="subjects" />
       </div>
       <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
-          Submit
+          Dodaj grupę
         </button>
       </div>
     </form>

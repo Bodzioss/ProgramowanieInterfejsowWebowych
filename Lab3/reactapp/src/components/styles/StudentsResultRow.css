@@ -1,11 +1,11 @@
 .component-group-result-row {
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  height: 32px;
+  height: 72px;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
-
+  display: block;
 }
 
 .component-group-result-row:hover {
@@ -16,8 +16,6 @@
 
 .component-group-result-row .title {
   position: relative;
-
-
 }
 
 .component-group-result-row .main {

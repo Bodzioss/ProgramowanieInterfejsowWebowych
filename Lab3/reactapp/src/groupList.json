@@ -1,20 +1,20 @@
 [
     {
-      "title": "Projekt A",
-      "subject": "History",
+      "title": "Projekt strony internetowej",
+      "subjects": "Informatyka",
       "description":
-        "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+        "Projekt zakłada wykonanie strony internetowej w wybranym przrz siebie temacie"
     },
     {
-      "title": "Projekt A",
-      "subject": "History",
+      "title": "Projektowanie układów cyfrowych",
+      "subjects": "Logika układów cyfrowych",
       "description":
-        "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+        "Projekt zakłada zaprojektowanie i wykonanie układu cyfrowego"
       },
       {
-        "title": "Projekt A",
-        "subject": "History",
+        "title": "Piesi na drodze",
+        "subjects": "Rozpoznawanie i przetwarzanie obrazów",
         "description":
-          "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+        "Projekt zakłada zaimplementowanie programu wykrywającego pieszych na drodze"
       }
 ]

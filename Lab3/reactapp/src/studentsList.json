@@ -2,22 +2,22 @@
   {
     "name": "Marcin",
     "email": "Marcin@wp.pl",
-    "tags": "Projekt A",
+    "tags": "Projekt His",
     "subjects": "Historia",
-    "description": "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+    "description": "Projekt Historyczny"
   },
   {
     "name": "Adam",
     "email": "Adam@wp.pl",
-    "tags": "Projekt B",
+    "tags": "Projekt Geo",
     "subjects": "Geografia",
-    "description": "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+    "description": "Projekt Geograficzny"
   },
   {
     "name": "Anna",
     "email": "Anna@wp.pl",
-    "tags": "Projekt C",
+    "tags": "Projekt IT",
     "subjects": "Informatyka",
-    "description": "hundred points symbol symbol wow wow win win perfect perfect parties parties"
+    "description": "Projekt Informatyczny"
   }
 ]

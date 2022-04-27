@@ -33,14 +33,14 @@ export default class App extends PureComponent {
   
 
   render() {
-    const triggerTextStudent = 'Add Student';
+    const triggerTextStudent = 'Dodaj Studenta';
     const GroupOnSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log(event.target.email.value);
     };
 
-    const triggerTextGroup = 'Add Group';
+    const triggerTextGroup = 'Dodaj Grupę';
     const StudentOnSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);

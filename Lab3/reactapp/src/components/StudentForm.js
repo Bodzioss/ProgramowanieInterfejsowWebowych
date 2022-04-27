@@ -1,14 +1,17 @@
 import React from 'react';
 
+import "../App.css"
+
+
 export const StudentForm = ({ StudentOnSubmit }) => {
   return (
     <form onSubmit={StudentOnSubmit}>
       <div className="form-group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Imię</label>
         <input className="form-control" id="name" />
       </div>
       <div className="form-group">
-        <label htmlFor="email">Email address</label>
+        <label htmlFor="email">Adres email</label>
         <input
           type="email"
           className="form-control"
@@ -17,8 +20,12 @@ export const StudentForm = ({ StudentOnSubmit }) => {
         />
       </div>
       <div className="form-group">
-        <button className="form-control btn btn-primary" type="submit">
-          Submit
+        <label htmlFor="tags">Tagi</label>
+        <input className="form-control" id="tags" />
+      </div>
+      <div className="form-group">
+        <button className="button-85" type="submit">
+          Dodaj studenta
         </button>
       </div>
     </form>

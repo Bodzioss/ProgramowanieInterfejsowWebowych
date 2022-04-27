@@ -7,14 +7,10 @@ export default class StudentsResultRow extends PureComponent {
   render() {
     return (
       <div className="component-group-result-row copy-to-clipboard">
-        <div className="main">
-          <span className="Name">{this.props.name}  </span>
-          <div className="number">
-            <span className="tags">{this.props.tags}/</span>
-            <span className="subjects">{this.props.subjects}</span>
-          </div>
-        </div>
-        <span className="description">{this.props.description}</span>
+          <div className="Name">{this.props.name}  </div>
+            <div className="tags">{this.props.tags}</div>
+            <div className="subjects">{this.props.subjects}</div>
+        <div className="description">{this.props.description}</div>
       </div>
     );
   }
