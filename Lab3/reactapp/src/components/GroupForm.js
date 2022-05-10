@@ -2,9 +2,9 @@ import React from 'react';
 
 import "./styles/GroupForm.css"
 
-export const GroupForm = ({ GroupOnSubmit }) => {
+export const GroupForm = ({ onSubmit }) => {
   return (
-    <form onSubmit={GroupOnSubmit}>
+    <form onSubmit={onSubmit}>
       <div className="form-group">
         <label htmlFor="name">Nazwa</label>
         <input className="form-control" id="name" />

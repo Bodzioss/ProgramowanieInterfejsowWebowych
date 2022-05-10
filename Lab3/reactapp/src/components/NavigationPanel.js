@@ -5,10 +5,10 @@ import "./styles/NavigationPanel.css"
 
 export default function NavigationPanel() {
     return (
-            <nav class="navMenu">
+            <nav className="navMenu">
                 <a href="/StudentsResult">Studenci</a>
                 <a href="/GroupResult">Grupy</a>
-                <div class="dot"></div>
+                <div className="dot"></div>
             </nav>
     );
 }

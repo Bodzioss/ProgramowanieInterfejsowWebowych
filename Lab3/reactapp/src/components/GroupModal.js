@@ -8,7 +8,7 @@ export const GroupModal = ({
   modalRef,
   buttonRef,
   closeModal,
-  GroupOnSubmit
+  onSubmit
 }) => {
   return ReactDOM.createPortal(
     <FocusTrap>
@@ -37,7 +37,7 @@ export const GroupModal = ({
             </svg>
           </button>
           <div className="modal-body">
-            <GroupForm onSubmit={GroupOnSubmit} />
+            <GroupForm onSubmit={onSubmit} />
           </div>
         </div>
       </aside>

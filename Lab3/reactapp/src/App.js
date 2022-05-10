@@ -34,17 +34,20 @@ export default class App extends PureComponent {
 
   render() {
     const triggerTextStudent = 'Dodaj Studenta';
+    const triggerTextGroup = 'Dodaj Grupę';
+
     const GroupOnSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);
-      console.log(event.target.email.value);
+      console.log('GroupOnSubmit');
     };
 
-    const triggerTextGroup = 'Dodaj Grupę';
+   
     const StudentOnSubmit = (event) => {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log(event.target.email.value);
+      console.log('StudentOnSubmit');
     };
     return (
       <Router>

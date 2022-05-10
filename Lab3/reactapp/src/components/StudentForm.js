@@ -3,9 +3,9 @@ import React from 'react';
 import "../App.css"
 
 
-export const StudentForm = ({ StudentOnSubmit }) => {
+export const StudentForm = ({ onSubmit }) => {
   return (
-    <form onSubmit={StudentOnSubmit}>
+    <form onSubmit={onSubmit}>
       <div className="form-group">
         <label htmlFor="name">Imię</label>
         <input className="form-control" id="name" />
