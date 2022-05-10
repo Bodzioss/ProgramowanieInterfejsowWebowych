@@ -1,0 +1,41 @@
+.component-group-result-row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  height: 52px;
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  display: block;
+}
+
+.component-group-result-row:hover {
+  background-color: #eee;
+}
+
+
+
+.component-group-result-row .title {
+  position: relative;
+}
+
+.component-group-result-row .main {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.component-group-result-row .info {
+  float: right;
+  position: relative;
+  top: 8px;
+  right: 10px;
+  color: #ccc;
+  display: none;
+}
+
+.component-group-result-row:hover .info {
+  display: inline-block;
+}
