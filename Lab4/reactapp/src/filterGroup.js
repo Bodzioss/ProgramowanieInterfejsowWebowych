@@ -1,17 +1,7 @@
-import { useEffect,useState } from "react";
-import axios from 'axios'
+import groupList from "./groupList.json";
 
-export default function FilterGroup(searchText, maxResults) {
-  const [toDos,setToDos] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhosts:3000/studentsList.json")
-      .then(res => {
-        const todos = res.data.map(it => it.name);
-      })
-  })
-
-  return toDos
+export default function filterGroup(searchText, maxResults) {
+  return groupList
     .filter(group => {
       if (group.title.toLowerCase().includes(searchText.toLowerCase())) {
         return true;

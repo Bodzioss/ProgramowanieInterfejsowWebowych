@@ -1,12 +1,13 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import { saveAs } from 'file-saver';
 import NavigationPanel from './components/NavigationPanel';
 import InputData from './components/InputData';
 import GroupResult from './components/GroupResult';
 import StudentsResults from './components/StudentsResult';
 import filterGroup from './filterGroup';
-// import FilterStudents from './FilterStudents';
+import filterStudents from './filterStudents';
 import { GroupContainer } from './components/GroupContainer';
 import { StudentContainer } from './components/StudentContainer';
 
@@ -18,14 +19,14 @@ export default class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      // filterStudents: FilterStudents("", 20),
+      filterStudents: filterStudents("", 20),
       filterGroup: filterGroup("", 20)
     };
   }
 
   handleSearchChange = event => {
     this.setState({
-      // filterStudents: FilterStudents(event.target.value, 20),
+      filterStudents: filterStudents(event.target.value, 20),
       filterGroup: filterGroup(event.target.value, 20)
     });
   };
@@ -41,6 +42,11 @@ export default class App extends PureComponent {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log('GroupOnSubmit');
+
+      this.setState = {
+        filterStudents: filterStudents("a", 1),
+        filterGroup: filterGroup("afesd", 1)
+      };
     };
 
 
@@ -57,7 +63,7 @@ export default class App extends PureComponent {
           <InputData textChange={this.handleSearchChange} />
           <Routes>
             <Route path="/StudentsResult" element={<div>
-              {/* <StudentsResults studentsData={this.state.filterStudents} /> */}
+              <StudentsResults studentsData={this.state.filterStudents} />
               <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} />
             </div>
             } />
