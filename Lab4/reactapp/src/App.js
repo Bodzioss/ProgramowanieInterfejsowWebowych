@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { saveAs } from 'file-saver';
+
 import NavigationPanel from './components/NavigationPanel';
 import InputData from './components/InputData';
 import GroupResult from './components/GroupResult';
@@ -15,6 +15,9 @@ import "./App.css";
 
 
 export default class App extends PureComponent {
+
+  
+
 
   constructor(props) {
     super(props);
