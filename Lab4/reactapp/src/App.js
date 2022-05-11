@@ -11,6 +11,7 @@ import filterGroup from './filterGroup';
 import filterStudents from './filterStudents';
 import { GroupContainer } from './components/GroupContainer';
 import { StudentContainer } from './components/StudentContainer';
+import Login from './components/Login/Login';
 
 import "./App.css";
 
@@ -48,6 +49,7 @@ function App() {
     return (
       <Router>
         <div className="App">
+          <Login/>
           <NavigationPanel/>
           <Routes>
             <Route path="/StudentsResult" element={<div>
