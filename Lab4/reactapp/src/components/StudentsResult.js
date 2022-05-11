@@ -20,6 +20,7 @@ export default class StudentsResult extends PureComponent {
             tags={studentsData.tags}
             subjects={studentsData.subjects}
             description={studentsData.description}
+            photo={studentsData.photo}
           />
         ))}
       </div>
