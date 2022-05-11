@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-
+import axios from "axios";
 import NavigationPanel from './components/NavigationPanel';
 import InputData from './components/InputData';
 import GroupResult from './components/GroupResult';
@@ -14,17 +14,30 @@ import { StudentContainer } from './components/StudentContainer';
 import "./App.css";
 
 
+const api = axios.create({
+  baseURL: 'http://localhost:3000/groupList.json'
+})
+
 export default class App extends PureComponent {
 
-  
+  state = {
+    groups: []
+  }
 
 
   constructor(props) {
     super(props);
+    this.getGroups.bind(this);
     this.state = {
-      filterStudents: filterStudents("", 20),
-      filterGroup: filterGroup("", 20)
+      filterStudents: filterStudents("", 20,),
+      filterGroup: filterGroup("", 20,this.state.groups)
     };
+  }
+
+  getGroups = async () => {
+    let data = await api.get('/').then(({data}) => data);
+    this.setState({groups: data})
+    console.log("data")
   }
 
   handleSearchChange = event => {
@@ -45,11 +58,6 @@ export default class App extends PureComponent {
       event.preventDefault(event);
       console.log(event.target.name.value);
       console.log('GroupOnSubmit');
-
-      this.setState = {
-        filterStudents: filterStudents("a", 1),
-        filterGroup: filterGroup("afesd", 1)
-      };
     };
 
 
