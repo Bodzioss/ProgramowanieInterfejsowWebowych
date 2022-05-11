@@ -27,18 +27,18 @@ function App() {
     axios.get('studentsList.json')
       .then(res => {
         const newRes = res.data.students.map(student => {
-          return {...student, photo: 'https://picsum.photos/70/100'}
+          return { ...student, photo: 'https://picsum.photos/70/100' }
         })
         setStudents(newRes);
       });
 
     axios.get('groupList.json')
-         .then(res => {
-                setGroups(res.data);
-              })
-         .catch(err => {
-                console.log(err)
-              })
+      .then(res => {
+        setGroups(res.data);
+      })
+      .catch(err => {
+        console.log(err)
+      })
 
   }, []);
 
@@ -46,27 +46,27 @@ function App() {
 
 
 
-    return (
-      <Router>
-        <div className="App">
-          <Login/>
-          <NavigationPanel/>
-          <Routes>
-            <Route path="/StudentsResult" element={<div>
-              <StudentsResults studentsData={students} />
-              {/* <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} /> */}
-            </div>
-            } />
-            <Route path="/GroupResult" element={<div>
-              <GroupResult groupData={groups} />
-              {/* <GroupContainer triggerText={triggerTextGroup} onSubmit={GroupOnSubmit} /> */}
-            </div>
-            } />
-          </Routes>
-        </div>
-      </Router>
-    );
-  }
+  return (
+    <Router>
+      <div className="App">
+        <Login />
+        <NavigationPanel />
+        <Routes>
+          <Route path="/StudentsResult" element={<div>
+            <StudentsResults studentsData={students} />
+            {/* <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} /> */}
+          </div>
+          } />
+          <Route path="/GroupResult" element={<div>
+            <GroupResult groupData={groups} />
+            {/* <GroupContainer triggerText={triggerTextGroup} onSubmit={GroupOnSubmit} /> */}
+          </div>
+          } />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 
 

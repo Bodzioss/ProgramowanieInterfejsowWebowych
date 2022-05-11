@@ -1,12 +1,12 @@
 import groupList from "./groupList.json";
 
-export default function filterGroup(searchText, maxResults,groups) {
+export default function filterGroup(searchText, maxResults, groups) {
 
   const axios = require('axios');
   console.log(groups)
   // const res = axios.get('http://localhost:3000/groupList.json') .then(response => {
   //   const groupJson = response.data.map(it => (it.title,it.subjects));
-    
+
   //   // console.log(groupJson)
   //   const groupp = groupJson
   //   .filter(group => {
@@ -22,7 +22,7 @@ export default function filterGroup(searchText, maxResults,groups) {
   //   return groupp;
   // });
 
-    const groupp = groupList
+  const groupp = groupList
     .filter(group => {
       if (group.title.toLowerCase().includes(searchText.toLowerCase())) {
         return true;
@@ -33,5 +33,5 @@ export default function filterGroup(searchText, maxResults,groups) {
       return false;
     })
     .slice(0, maxResults);
-    return groupp;
+  return groupp;
 }

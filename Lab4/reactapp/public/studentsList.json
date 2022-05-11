@@ -1,26 +1,25 @@
-
 {
-  "students":[
-  {
-    "name": "Marcin",
-    "email": "Marcin@wp.pl",
-    "tags": "Projekt His",
-    "subjects": "Historia",
-    "description": "Projekt Historyczny"
-  },
-  {
-    "name": "Adam",
-    "email": "Adam@wp.pl",
-    "tags": "Projekt Geo",
-    "subjects": "Geografia",
-    "description": "Projekt Geograficzny"
-  },
-  {
-    "name": "Anna",
-    "email": "Anna@wp.pl",
-    "tags": "Projekt IT",
-    "subjects": "Informatyka",
-    "description": "Projekt Informatyczny"
-  }
-]
+  "students": [
+    {
+      "name": "Marcin",
+      "email": "Marcin@wp.pl",
+      "tags": "Projekt His",
+      "subjects": "Historia",
+      "description": "Projekt Historyczny"
+    },
+    {
+      "name": "Adam",
+      "email": "Adam@wp.pl",
+      "tags": "Projekt Geo",
+      "subjects": "Geografia",
+      "description": "Projekt Geograficzny"
+    },
+    {
+      "name": "Anna",
+      "email": "Anna@wp.pl",
+      "tags": "Projekt IT",
+      "subjects": "Informatyka",
+      "description": "Projekt Informatyczny"
+    }
+  ]
 }
