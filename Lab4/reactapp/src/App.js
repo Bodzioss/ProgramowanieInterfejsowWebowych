@@ -1,7 +1,8 @@
-import React, { PureComponent } from "react";
+
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-
+import axios from "axios";
 import NavigationPanel from './components/NavigationPanel';
 import InputData from './components/InputData';
 import GroupResult from './components/GroupResult';
@@ -14,65 +15,49 @@ import { StudentContainer } from './components/StudentContainer';
 import "./App.css";
 
 
-export default class App extends PureComponent {
 
-  
-
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      filterStudents: filterStudents("", 20),
-      filterGroup: filterGroup("", 20)
-    };
-  }
-
-  handleSearchChange = event => {
-    this.setState({
-      filterStudents: filterStudents(event.target.value, 20),
-      filterGroup: filterGroup(event.target.value, 20)
-    });
-  };
+function App() {
 
 
+  const [students, setStudents] = useState([]);
+  const [groups, setGroups] = useState([]);
 
-  render() {
+  useEffect(() => {
+    axios.get('studentsList.json')
+      .then(res => {
+        const newRes = res.data.students.map(student => {
+          return {...student, photo: 'https://picsum.photos/70/100'}
+        })
+        setStudents(newRes);
+      });
 
-    const triggerTextStudent = 'Dodaj Studenta';
-    const triggerTextGroup = 'Dodaj Grupę';
+    axios.get('groupList.json')
+         .then(res => {
+                setGroups(res.data);
+              })
+         .catch(err => {
+                console.log(err)
+              })
 
-    const GroupOnSubmit = (event) => {
-      event.preventDefault(event);
-      console.log(event.target.name.value);
-      console.log('GroupOnSubmit');
-
-      this.setState = {
-        filterStudents: filterStudents("a", 1),
-        filterGroup: filterGroup("afesd", 1)
-      };
-    };
+  }, []);
 
 
-    const StudentOnSubmit = (event) => {
-      event.preventDefault(event);
-      console.log(event.target.name.value);
-      console.log(event.target.email.value);
-      console.log('StudentOnSubmit');
-    };
+
+
+
     return (
       <Router>
         <div className="App">
-          <NavigationPanel />
-          <InputData textChange={this.handleSearchChange} />
+          <NavigationPanel/>
           <Routes>
             <Route path="/StudentsResult" element={<div>
-              <StudentsResults studentsData={this.state.filterStudents} />
-              <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} />
+              <StudentsResults studentsData={students} />
+              {/* <StudentContainer triggerText={triggerTextStudent} onSubmit={StudentOnSubmit} /> */}
             </div>
             } />
             <Route path="/GroupResult" element={<div>
-              <GroupResult groupData={this.state.filterGroup} />
-              <GroupContainer triggerText={triggerTextGroup} onSubmit={GroupOnSubmit} />
+              <GroupResult groupData={groups} />
+              {/* <GroupContainer triggerText={triggerTextGroup} onSubmit={GroupOnSubmit} /> */}
             </div>
             } />
           </Routes>
@@ -80,6 +65,9 @@ export default class App extends PureComponent {
       </Router>
     );
   }
-}
+
+
+
+export default App;
 
 

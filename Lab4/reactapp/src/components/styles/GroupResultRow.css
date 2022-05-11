@@ -1,11 +1,12 @@
 .component-group-result-row {
   border-bottom: 1px solid #ccc;
-  padding: 10px;
-  height: 52px;
+  padding: 50px;
+  height:60px;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   cursor: pointer;
   display: block;
+
 }
 
 .component-group-result-row:hover {
@@ -19,12 +20,16 @@
 }
 
 .component-group-result-row .main {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  display: inline;
+}
+
+.component-group-result-row .content {
+  display: inline;
+  text-align: left;
+}
+
+.component-group-result-row .image {
+  display: inline;
 }
 
 .component-group-result-row .info {
