@@ -50,6 +50,7 @@ p.lorem-text {
 }
 
 @media screen and (min-width: 500px) {
+
   /* Center the Modal! */
   .modal-area {
     left: 50%;
@@ -85,6 +86,7 @@ p.lorem-text {
 .modal-body {
   padding-top: 0.25em;
 }
+
 ._hide-visual {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
